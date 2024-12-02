@@ -1,0 +1,1061 @@
+/* Styles for Header section */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3.2rem;
+  position: relative;
+}
+
+.logo {
+  width: 20rem;
+}
+
+.navigation {
+  z-index: 5;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.94);
+  z-index: 10;
+  width: 100%;
+  padding: 0 1.2rem;
+  height: 8rem;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+}
+
+.nav-item:link,
+.nav-item:visited {
+  color: #000;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 200;
+  transition: all 0.3s;
+}
+
+.nav-item:hover {
+  color: #333;
+  font-size: 2.1rem;
+  text-decoration: underline;
+}
+
+.nav-item:active {
+  font-size: 2rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.btn-login {
+  border-radius: 2rem;
+  padding: 1.4rem 2.8rem;
+  letter-spacing: 2.5;
+}
+
+.profile-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.profile-initial {
+  background-color: bisque;
+  padding: 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0 1rem 4.5rem rgba(0, 0, 0, 0.1);
+}
+
+.profile-sub--menu {
+  position: absolute;
+  top: 4.5rem;
+  right: 3rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.profile-sub--menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.profile-sub--menu-list li {
+  padding: 1rem 2rem;
+}
+
+.profile-sub--menu-list li:hover {
+  background-color: #ddd;
+}
+
+.sub-menu-link:link,
+.sub-menu-link:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.sub-menu-link:hover,
+.sub-menu-link:active {
+  text-decoration: underline;
+}
+
+/* Styles for hero section */
+
+.hero-section {
+  padding: 6.4rem 2.4rem 4.8rem 2.4rem;
+}
+
+.hero-text {
+  gap: 2rem;
+  align-items: start;
+  justify-content: start;
+  justify-items: start;
+}
+
+.primary-header {
+  font-size: 6.2rem;
+}
+
+.secondary-header {
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.tertiary-header {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.hero-img {
+  height: 40rem;
+  justify-self: end;
+  transform: scale(1.5);
+}
+
+.hero-secondary {
+  height: 10rem;
+  width: 12rem;
+  /* transform: translate(1rem, 1rem); */
+  margin-top: 0.8rem;
+}
+
+.hero-secondary:nth-child(2) {
+  transform: translate(0rem, 1rem);
+  /* animation: scrollLeaves1 linear forwards; */
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-name: scrollLeaves1;
+  animation-timeline: view();
+  animation-range: exit-crossing -60rem;
+}
+
+.hero-secondary:nth-child(3) {
+  transform: translate(12rem, 7rem);
+  /* animation: scrollLeaves2 linear forwards; */
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-name: scrollLeaves2;
+  animation-timeline: view();
+  animation-range: exit-crossing -60rem;
+}
+
+.hero-secondary:nth-child(4) {
+  transform: translate(22rem, 1rem);
+  /* animation: scrollLeaves3 linear forwards; */
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-name: scrollLeaves3;
+  animation-timeline: view();
+  animation-range: exit-crossing -60rem;
+}
+
+@keyframes scrollLeaves1 {
+  to {
+    transform: translate(13rem, 7.5rem);
+  }
+}
+
+@keyframes scrollLeaves2 {
+  to {
+    transform: translate(24rem, 1rem);
+  }
+}
+
+@keyframes scrollLeaves3 {
+  to {
+    transform: translate(28rem, -15rem);
+  }
+}
+
+.hero--links {
+  display: flex;
+  gap: 2.4rem;
+}
+
+/* Styles for feature section */
+
+.feature-section {
+  padding: 6.4rem 2.4rem;
+}
+
+.food-image {
+  width: 23rem;
+  z-index: 2;
+}
+
+.food-card-desc {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 10.2rem 1.2rem 2.4rem 1.2rem;
+  margin-top: -9.8rem;
+}
+
+.food-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.food-sec-heading {
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.primary--description,
+.food-description {
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+.food-price {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.food-heading-box {
+  display: grid;
+  grid-template-columns: 95fr 5fr;
+  align-items: center;
+}
+
+.food-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.btn-cart-secondary {
+  margin-top: -2.5rem;
+  margin-left: 75%;
+}
+
+.food-carousel {
+  gap: 2.4rem;
+  position: relative;
+  padding: 1.6rem 0.8rem;
+  /* overflow-x: hidden; */
+}
+
+.feature-container {
+  gap: 6.4rem;
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: 2.4rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.carousel-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+  z-index: 2;
+}
+
+.carousel-btn-icons {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.carousel-button:hover {
+  transform: scale(1.8);
+}
+
+.feature-text {
+  padding: 8rem 0;
+}
+
+/* Pricing section */
+.price-section {
+  padding: 4.8rem 2.4rem;
+}
+
+.price-section-container {
+  gap: 6.4rem;
+}
+
+.price-text {
+  padding-top: 2.4rem;
+}
+
+.price-img {
+  width: 60rem;
+}
+
+.price-image {
+  position: relative;
+}
+
+.price-image::before {
+  content: "$25.89";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #e03131;
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding: 3.2rem;
+  height: 7.4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 8rem;
+}
+
+.price-image::after {
+  content: "";
+  background-image: url(/img/tomato.png);
+  transform: rotate(140deg);
+  background-size: cover;
+  width: 12rem;
+  height: 8rem;
+  position: absolute;
+  bottom: 0.8rem;
+  right: 8rem;
+}
+
+.app-image {
+  width: 45rem;
+}
+
+.app-link-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app--links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.app-link-container {
+  border-bottom: 2px solid #495057;
+}
+
+/* Styles for CTA Section */
+.section-cta {
+  padding: 0rem 2.4rem 6.4rem 2.4rem;
+}
+
+.pre-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #495057;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Footer styles */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: start;
+  padding: 6.4rem 2.4rem;
+}
+
+.footer--links {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer-link a:link,
+.footer-link a:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 0.1rem;
+}
+
+.footer-link a:hover,
+.footer-link a:active {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  width: 15rem;
+}
+
+.secondary-description {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 0.1rem;
+  line-height: 1.4;
+}
+
+.contact-link:link,
+.contact-link:visited {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 0.3rem;
+}
+
+/* CTA Modal styles */
+.cta-section-wrapper,
+.login-section-overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.8s;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2.5px);
+}
+.section-cta-modal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 60%;
+  color: #fff;
+  padding: 4.8rem 2.4rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  transition: all 0.8s;
+  z-index: 10;
+}
+
+.login-modal {
+  position: fixed;
+  color: #000;
+  padding: 4.8rem 2.4rem;
+  background-color: #fff;
+  transition: all 0.8s;
+  z-index: 10;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta-hide {
+  transform: translateX(100rem);
+}
+
+.cta-wrapper-hide {
+  display: none;
+}
+
+.cta-form,
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+.country-phone {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: space-between;
+}
+
+.cta-form-heading {
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+}
+
+.cta-desc {
+  color: #ddd;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 3.2rem;
+}
+
+.micro-desc {
+  color: #444;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 3.2rem;
+}
+
+.cta-form input {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 0.2px solid #ccc;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  padding: 1.2rem 1.8rem;
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.cta-form select {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 0.2px solid #ccc;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  padding: 1.2rem 1.8rem;
+  color: #fff;
+  width: 50%;
+  backdrop-filter: blur(6px);
+}
+
+.cta-form textarea {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 0.2px solid #ccc;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  padding: 1.2rem 1.8rem;
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.login-form input,
+.register-form input {
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 1px;
+  font-size: 1.4rem;
+  padding: 1.2rem 1.8rem;
+  color: #000;
+  width: 30rem;
+}
+
+.cta-form textarea::placeholder {
+  font-family: inherit;
+}
+
+.cta-footer {
+  margin-top: 1.8rem;
+  color: #aaa;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-top: 0.1px solid #aaa;
+  padding-top: 0.8rem;
+}
+
+.privacy-link:link,
+.privacy-link:visited {
+  display: block;
+  color: #888;
+  padding: 0.4rem 0;
+}
+
+.privacy-link:hover,
+.privacy-link:active {
+  color: #aaa;
+}
+
+.cross-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  height: 2.4rem;
+  width: 2.4rem;
+  transition: all 0.4s;
+}
+
+.cross-icon--right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  height: 2.4rem;
+  width: 2.4rem;
+  transition: all 0.4s;
+}
+
+.cross-icon:hover,
+.cross-icon--right:hover {
+  transform: rotate(180deg);
+}
+
+/* Style for Menu section */
+.main-menu {
+  padding: 2.4rem 2.4rem 6.4rem 2.4rem;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: 70fr 30fr;
+  gap: 2.4rem;
+}
+
+.menu-main {
+  gap: 2.4rem;
+}
+
+.menu-desc {
+  background-color: rgba(252, 252, 242, 0.458);
+  padding: 3.2rem;
+  border-radius: 20px;
+  transform: translateY(-2rem);
+}
+
+.tab-container {
+  display: flex;
+  gap: 20%;
+  padding: 1.2rem;
+}
+
+.tab-content {
+  margin-top: 1.2rem;
+}
+
+.rating {
+  font-size: 6.2rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0 1.2rem;
+}
+
+.rating::after {
+  content: "";
+  background-color: #fcc2d7;
+  width: 7rem;
+  height: 100%;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.star {
+  display: block;
+  font-size: 3rem;
+}
+
+.rate,
+.star {
+  position: relative;
+  z-index: 1;
+}
+
+.chef-name {
+  margin-top: 2.4rem;
+}
+
+.food-description {
+  margin-top: 1.2rem;
+}
+
+.tab-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #666;
+  letter-spacing: 0.1rem;
+}
+
+.tab-button:hover {
+  text-decoration: underline;
+}
+
+.tab-button--selected {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.like-button-container {
+  margin-top: 3.2rem;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.like-btns {
+  padding: 0.8rem;
+  border-radius: 15px;
+  border: none;
+  background-color: rgba(241, 241, 236);
+  cursor: pointer;
+}
+
+.like-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #888;
+}
+
+.hanging-bulb-icon {
+  position: absolute;
+  top: 0;
+  right: 5.2rem;
+  z-index: 5;
+  height: 30%;
+}
+
+.background-circle {
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  height: 100rem;
+  width: 110rem;
+  border-radius: 30%;
+  background-color: transparent;
+  border: 120px solid rgba(255, 222, 235, 0.423);
+  z-index: 0;
+}
+
+.food-img-main {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-2rem);
+}
+
+.pre-header {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1.2rem;
+  margin-top: 1.4rem;
+  text-transform: capitalize;
+}
+
+.food-header {
+  font-size: 7.4rem;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.food-header-light {
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  word-break: break-word;
+}
+
+.food-header-bold {
+  font-weight: 600;
+  letter-spacing: -0.4rem;
+  word-break: break-word;
+}
+
+.food-image-title {
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.food-carousel {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: space-around;
+  position: relative;
+  padding: 0 3.2rem;
+
+  max-width: 100%;
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.food-preview-container {
+  /* width: 78.1rem; */
+  transition: transform 1s;
+  display: flex;
+  gap: 4.4rem;
+  justify-content: space-around;
+}
+
+.food-preview {
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+
+  width: 25%;
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.food-preview--hidden {
+  /* display: none; */
+  transform: translateX(-20%);
+}
+
+.food-preview:hover,
+.food-preview--selected {
+  background-color: rgba(252, 252, 242, 0.458);
+}
+
+.food-img-preview {
+  width: 14rem;
+  margin-bottom: 1.2rem;
+  border-radius: 50%;
+}
+
+.food-title-preview {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.food-desc {
+  padding-top: 2.4rem;
+}
+
+.menu-carousel-btns {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-carousel-left {
+  left: 0;
+}
+
+.menu-carousel-right {
+  right: 0;
+}
+
+.ing-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Cart page styles */
+.item-section {
+  display: grid;
+  grid-template-columns: 70fr 30fr;
+}
+
+.cart-container {
+  padding: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.cart-line--item {
+  grid-template-columns: 1fr 2fr 0.3fr 1fr 1fr;
+  display: grid;
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 0.5px solid grey;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.cart-food-img-preview {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.food-quantity-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.btn-quantity {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.checkout-section {
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+  padding: 2.4rem;
+  position: relative;
+  min-height: 45rem;
+  max-height: 42rem;
+}
+
+.btn-checkout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.4rem;
+  border: none;
+  background-color: #fcc419;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+}
+
+.checkout-form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+  color: #343a40;
+  backdrop-filter: blur(6px);
+}
+
+.checkout-form label {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.checkout-form > div {
+  margin-top: 2.4rem;
+}
+
+.grid-gap-card {
+  gap: 1.2rem;
+}
+
+.expiry-date {
+  display: grid;
+  grid-template-columns: 35fr 10fr 55fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.slash {
+  font-size: 2.4rem;
+}
+
+#month {
+  max-width: 4.8rem;
+}
+
+#year {
+  max-width: 7rem;
+}
+
+/* Style for liked accordion */
+.icon-collapase {
+  height: 2.4rem;
+  width: 2.4rem;
+  stroke: #087f5b;
+  cursor: pointer;
+}
+
+.hidden-box {
+  display: none;
+}
+
+.show-box {
+  display: block;
+}
+
+.accordion-heading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.heading {
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+.list {
+  color: #868e96;
+  margin-left: 2rem;
+
+  /* Use FLEXBOX to add gap easily between elements of a list */
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.accordion {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  padding: 24px;
+
+  /* Create GRID to item alignment */
+  display: grid;
+  grid-template-columns: 95fr 5fr;
+  row-gap: 2.4rem;
+  justify-items: start;
+  border-radius: 9px;
+}
+
+/* Open state class CSS */
+.accordion--expanded {
+  border-top: 3px solid #087f5b;
+}
+
+.accordion--expanded .accordion-heading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #087f5b;
+}
+
+.accordion-container {
+  display: grid;
+  grid-template-columns: 70fr 30fr;
+  padding: 0 4.8rem;
+}

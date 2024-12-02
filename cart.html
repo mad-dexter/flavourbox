@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlavorBox - Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/toast.css" />
+  </head>
+  <body class="cart-page">
+    <div class="background-overlay menu-background">
+      <!-- Header -->
+      <header class="header">
+        <a href="index.html">
+          <img
+            src="img/icons/Flavourbox-Icon.png"
+            alt="Icon for Flavourbox"
+            class="logo"
+          />
+        </a>
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li>
+              <a href="menu.html" class="nav-item">Menu</a>
+            </li>
+            <li class="profile-icons"></li>
+            <li>
+              <a href="#" class="btn-cart"
+                ><ion-icon name="cart-outline" class="cart-outline"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main section -->
+      <section class="cart-main">
+        <h1 class="tertiary-header margin-l-2-4x">Your Cart</h1>
+        <div class="item-section">
+          <div class="cart-container">
+            <!-- Container for cart items. To be filled using code -->
+          </div>
+
+          <div class="checkout-section">
+            <h3 class="tertiary-header">Card Details</h3>
+            <form class="checkout-form" action="submit">
+              <div class="grid grid-1--col">
+                <label for="cardnumber">Card Number</label>
+                <input type="text" id="cardnumber" name="cardnumber" />
+              </div>
+              <div class="grid grid-2--cols grid-gap-card">
+                <div>
+                  <label for="month">Expiry Date</label>
+                  <div class="expiry-date">
+                    <input type="number" id="month" name="month" />
+                    <span class="slash">/</span>
+                    <input type="number" id="year" name="year" />
+                  </div>
+                </div>
+                <div>
+                  <label for="cvv">CVV</label>
+                  <input type="number" id="cvv" name="cvv" />
+                </div>
+              </div>
+              <div class="grid grid-1--col margin-t-2-4x">
+                <label for="address">Delivery Address</label>
+                <input type="text" id="address" name="address" />
+              </div>
+            </form>
+            <button class="btn-checkout">Checkout</button>
+          </div>
+        </div>
+      </section>
+      <section class="liked-section">
+        <div class="accordion-container">
+          <!--  -->
+          <div class="accordion">
+            <p class="accordion-heading">Liked Foods</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-collapase"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+
+            <!--  -->
+            <div class="hidden-box">
+              <!-- Container to show all the liked items -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer Section -->
+      <footer class="footer">
+        <img
+          src="img/icons/Flavourbox-Icon.png"
+          alt="Icon for Flavourbox"
+          class="footer-logo"
+        />
+        <div class="footer--links">
+          <h3 class="tertiary-header">Our Services</h3>
+          <ul class="footer-list">
+            <li class="footer-link"><a href="#">Pricing</a></li>
+            <li class="footer-link"><a href="#">Tracking</a></li>
+            <li class="footer-link"><a href="#">Report a bug</a></li>
+            <li class="footer-link"><a href="#">Terms of services</a></li>
+          </ul>
+        </div>
+        <div class="footer--links">
+          <h3 class="tertiary-header">Our Company</h3>
+          <ul class="footer-list">
+            <li class="footer-link"><a href="#">Reporting</a></li>
+            <li class="footer-link"><a href="#">Get in Touch</a></li>
+            <li class="footer-link"><a href="#">Management</a></li>
+          </ul>
+        </div>
+        <div class="footer--links">
+          <h3 class="tertiary-header">Address</h3>
+          <p class="secondary-description">
+            121 King St, 55 Eagles Avenue <br />Texas <br /><a
+              href="tel:888-8888-090"
+              class="contact-link"
+              >888-8888-090</a
+            >
+            <br /><a href="mailto:info@gmail.com" class="contact-link"
+              >info@gmail.com</a
+            >
+          </p>
+          <ul class="footer-list">
+            <li class="footer-link">
+              <a
+                href="https://www.freepik.com/free-vector/falling-tea-leaves-realistic-green-foliage-flying_35563589.htm#fromView=search&page=1&position=0&uuid=a487642f-ac9e-4f7d-b696-304f26a8f1d7"
+                target="_blank"
+                >Image by upklyak on Freepik</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Login/Register modal form -->
+    <div class="login-section-overlay hide"></div>
+    <div class="login-modal hide">
+      <div class="tab-container margin-b-2-4x login-tab">
+        <button
+          class="tab-button tab-button--selected login-tab-btn"
+          data-action="login"
+        >
+          Sign in
+        </button>
+        <button class="tab-button login-tab-btn" data-action="register">
+          Sign up
+        </button>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="cross-icon--right"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+      <div class="message-container"></div>
+      <!-- Login form -->
+      <form class="user-cred login-form" action="submit">
+        <input type="email" placeholder="Email ID" name="email" required />
+        <input
+          type="password"
+          placeholder="Enter a password"
+          name="password"
+          required
+        />
+        <button class="button button-primary margin-t-2-4x">Login</button>
+      </form>
+
+      <!-- Registration form -->
+      <form class="user-cred register-form hide" action="submit">
+        <input
+          type="text"
+          placeholder="First Name*"
+          name="firstname"
+          required
+        />
+        <input type="text" placeholder="Last Name*" name="lastname" required />
+        <input type="email" placeholder="Email ID*" name="email" required />
+        <input
+          type="password"
+          placeholder="Enter a password"
+          name="password"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Confirm password"
+          name="cpassword"
+          required
+        />
+        <button class="button button-primary margin-t-2-4x">Register</button>
+      </form>
+    </div>
+
+    <!-- Toast division -->
+    <div class="toastBox"></div>
+
+    <!-- All scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script type="module" src="scripts/loginController.js"></script>
+    <script type="module" src="scripts/cartController.js"></script>
+  </body>
+</html>

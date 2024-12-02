@@ -1,0 +1,354 @@
+/* 
+
+--- 01 TYPOGRAPHY - Outfit
+
+-- FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98        
+
+-- LINE HEIGHT
+  DEFAULT: 1
+
+-- FONT WEIGHTS
+  DEFAULT: 400
+  Medium: 500
+  Semi bold: 600
+  Bold: 700
+
+---- 02 COLORS
+-- Primary: 
+-- Tint: 
+-- Shades:
+-- Accents:
+-- Grey: 
+
+--- 03 SHADOWS-
+0 0.6rem 3rem rgba(0, 0, 0, 0.5)
+0 0.6rem 3rem rgba(0, 0, 0, 0.3)
+0 2.6rem 2.5rem rgba(0, 0, 0, 0.38)
+0 1rem 3rem rgba(0, 0, 0, 0.1);
+
+--- 04 BORDER-RADIUS
+Default: 10px, 18px, 25px, 55px
+
+--- 05 WHITESPACES
+- SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* Smooth scrolling for chrome and firefox only */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-size: cover;
+  font-family: "Outfit", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  padding: 4.8rem;
+  color: #000;
+}
+
+.main-page {
+  background-image: url("/img/wallpaper--1.jpg");
+  backdrop-filter: blur(40px);
+}
+
+.menu-page {
+  background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url("/img/food_catalog/food-catalog-background3.jpg");
+}
+
+.cart-page {
+  background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.07)
+    ),
+    url("/img/Cart_Background.jpg");
+}
+
+/* Utility Classes */
+.hide {
+  display: none !important;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-1--col {
+  grid-template-columns: 1fr;
+}
+
+.grid-2--cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.margin-b-2-4x {
+  margin-bottom: 2.4rem;
+}
+
+.margin-l-2-4x {
+  margin-left: 2.4rem;
+}
+
+.margin-t-2-4x {
+  margin-top: 2.4rem;
+}
+
+.margin-t-6-4x {
+  margin-top: 6.4rem;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.error {
+  color: #f03e3e;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.success {
+  color: green;
+  font-size: 1.4rem;
+  padding: 0 2.4rem;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+/* Style classes */
+.menu-background {
+  background-color: rgba(241, 241, 236, 0.458);
+  position: relative;
+}
+
+.main-background {
+  background-color: rgba(255, 243, 191, 0.4);
+}
+
+.background-overlay {
+  backdrop-filter: blur(40px);
+  border-radius: 20px;
+  padding: 3.2rem 3.2rem;
+  position: relative;
+}
+
+.background-overlay::after {
+  content: "";
+  background-image: url("/img/food--footer.png");
+  background-size: cover;
+  position: absolute;
+  bottom: -1.8rem;
+  right: -2.9rem;
+  transform: rotate(342.5deg);
+  width: 22rem;
+  height: 12.6rem;
+}
+
+.btn-cart:link,
+.btn-cart:visited {
+  background-color: #000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.8rem 1rem 1.2rem 0.8rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 40px;
+  transition: all 0.6s;
+}
+
+.btn-cart:hover {
+  transform: scale(1.1);
+}
+
+.btn-cart:active {
+  transform: scale(1);
+}
+
+.arrow--right {
+  height: 2rem;
+  width: 2.4rem;
+}
+
+.cart-outline,
+.cart-outline-secondary {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #fff;
+  position: relative;
+}
+
+.cart-outline::after {
+  content: "·";
+  color: #f03e3e;
+  position: absolute;
+  top: -2rem;
+  right: 0rem;
+  font-size: 5.1rem;
+}
+
+.arrow--right {
+  color: #fff;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.btn:link,
+.btn:visited,
+.btn {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 1.4rem 4.8rem;
+  box-shadow: 0 0.6rem 3rem rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn--primary {
+  border-radius: 18px;
+  border-bottom-right-radius: 0px;
+  display: grid;
+  grid-template-columns: 80fr 20fr;
+  gap: 2.4rem;
+}
+
+.btn--secondary {
+  border-radius: 30px;
+  border-top-left-radius: 0;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:active {
+  transform: scale(1);
+}
+
+.food-btn:link,
+.food-btn:visited {
+  text-decoration: none;
+  background-color: rgba(222, 226, 230, 0.632);
+  box-shadow: 0 0.6rem 3rem rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.food-btn:hover {
+  transform: scale(1.05);
+}
+
+.food-btn:active {
+  transform: scale(1);
+}
+
+.food-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #000;
+}
+
+.small--btn {
+  border-radius: 50%;
+  border: none;
+  /* background-image: linear-gradient(to right, #ccc, #919597); */
+  background-color: rgba(145, 149, 151, 0.1);
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(45px);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.small--btn:hover {
+  transform: scale(1.05);
+}
+
+.small--btn:active {
+  transform: scale(1);
+}
+
+.like--icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  color: #000;
+}
+
+.app-button {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 0.4rem 0.8rem 2.4rem;
+  border-radius: 55px;
+  border-bottom-left-radius: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 2.6rem 2.5rem rgba(0, 0, 0, 0.38);
+  border: 0;
+  font-family: inherit;
+  font-size: 1.4rem;
+}
+
+.plus-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #fff;
+  justify-self: flex-end;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.button-primary {
+  background-color: #d9480f;
+  border: none;
+}
+
+.button-primary:hover,
+.button-primary:active {
+  background-color: #f76707;
+  cursor: pointer;
+}

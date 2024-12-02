@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlavorBox - Box of Surprise</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Script tags for JS -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script type="module" src="scripts/loginController.js"></script>
+  </head>
+  <body class="main-page">
+    <div class="background-overlay main-background">
+      <header class="header">
+        <a href="#">
+          <img
+            src="img/icons/Flavourbox-Icon.png"
+            alt="Icon for Flavourbox"
+            class="logo"
+          />
+        </a>
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li><a href="#" class="nav-item">Home</a></li>
+            <li>
+              <a href="menu.html" class="nav-item">Menu</a>
+            </li>
+            <li class="profile-icons"></li>
+            <li>
+              <a href="cart.html" class="btn-cart"
+                ><ion-icon name="cart-outline" class="cart-outline"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hero Section  -->
+      <section class="hero-section">
+        <div class="hero-section--container grid grid-2--cols">
+          <div class="hero-text grid grid-1--col">
+            <h1 class="primary-header">
+              Delicious <br />Food is Waiting <br />For you
+            </h1>
+            <a href="menu.html" class="btn btn--primary"
+              >View Menu
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="arrow--right"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </a>
+            <div class="hero--links">
+              <a href="menu.html#salad" class="food-btn"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="food-icon"
+                >
+                  <path
+                    d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="menu.html#sandwiches" class="food-btn"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="food-icon"
+                >
+                  <path
+                    d="M240,80a40,40,0,0,0-40-40H48a40,40,0,0,0-16,76.65V200a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V116.65A40.06,40.06,0,0,0,240,80ZM48,120a8,8,0,0,0,0-16,24,24,0,0,1,0-48h96a24,24,0,0,1,0,48,8,8,0,0,0,0,16v80H48Zm152-16a8,8,0,0,0,0,16v80H160V116.65A40,40,0,0,0,176,56h24a24,24,0,0,1,0,48Z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="menu.html#soup" class="food-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="food-icon"
+                >
+                  <path
+                    d="M224,112H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V216a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,120,8,8,0,0,0,224,112Zm-59.34,88a8,8,0,0,0-4.66,7.27V216H96v-8.71A8,8,0,0,0,91.34,200a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,200ZM81.77,55c5.35-6.66,6.67-11.16,6.12-13.14-.42-1.49-2.41-2.26-2.43-2.26A8,8,0,0,1,88,24a8.11,8.11,0,0,1,2.38.36c1,.31,9.91,3.33,12.79,12.76,2.46,8.07-.55,17.45-8.94,27.89-5.35,6.66-6.67,11.16-6.12,13.14.42,1.49,2.37,2.24,2.39,2.25A8,8,0,0,1,88,96a8.11,8.11,0,0,1-2.38-.36c-1-.31-9.91-3.33-12.79-12.76C70.37,74.81,73.38,65.43,81.77,55Zm40,0c5.35-6.66,6.67-11.16,6.12-13.14-.42-1.49-2.41-2.26-2.43-2.26A8,8,0,0,1,128,24a8.11,8.11,0,0,1,2.38.36c1,.31,9.91,3.33,12.79,12.76,2.46,8.07-.55,17.45-8.94,27.89-5.35,6.66-6.67,11.16-6.12,13.14.42,1.49,2.37,2.24,2.39,2.25A8,8,0,0,1,128,96a8.11,8.11,0,0,1-2.38-.36c-1-.31-9.91-3.33-12.79-12.76C110.37,74.81,113.38,65.43,121.77,55Zm40,0c5.35-6.66,6.67-11.16,6.12-13.14-.42-1.49-2.41-2.26-2.43-2.26A8,8,0,0,1,168,24a8.11,8.11,0,0,1,2.38.36c1,.31,9.91,3.33,12.79,12.76,2.46,8.07-.55,17.45-8.94,27.89-5.35,6.66-6.67,11.16-6.12,13.14.42,1.49,2.37,2.24,2.39,2.25A8,8,0,0,1,168,96a8.11,8.11,0,0,1-2.38-.36c-1-.31-9.91-3.33-12.79-12.76C150.37,74.81,153.38,65.43,161.77,55Z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="menu.html#drinks" class="food-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="food-icon"
+                >
+                  <path
+                    d="M224,88h0a95.63,95.63,0,0,0-15.53-52.37,8,8,0,0,0-6.7-3.63H54.23a8,8,0,0,0-6.7,3.63A95.63,95.63,0,0,0,32,88h0a96.12,96.12,0,0,0,88,95.66V216H88a8,8,0,0,0,0,16h80a8,8,0,0,0,0-16H136V183.66A96.12,96.12,0,0,0,224,88ZM58.7,48H197.3a79.52,79.52,0,0,1,10.3,32H48.4A79.52,79.52,0,0,1,58.7,48ZM128,168A80.11,80.11,0,0,1,48.4,96H207.6A80.11,80.11,0,0,1,128,168Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img
+              src="img/food--2.png"
+              alt="Picture of a great meal"
+              class="hero-img"
+            />
+            <img
+              src="img/leaves_2.png"
+              alt="leaves in food"
+              class="hero-secondary"
+            />
+            <img
+              src="img/leaves_2.png"
+              alt="leaves in food"
+              class="hero-secondary"
+            />
+            <img
+              src="img/leaves_2.png"
+              alt="leaves in food"
+              class="hero-secondary"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature box -->
+      <section class="feature-section">
+        <div class="feature-container grid grid-2--cols">
+          <div class="food-carousel grid grid-2--cols">
+            <div class="carousel-buttons">
+              <button class="carousel-button">
+                <ion-icon
+                  name="chevron-back-outline"
+                  class="carousel-btn-icons"
+                ></ion-icon>
+              </button>
+              <button class="carousel-button">
+                <ion-icon
+                  name="chevron-forward-outline"
+                  class="carousel-btn-icons"
+                ></ion-icon>
+              </button>
+            </div>
+            <div class="food-card">
+              <img
+                src="img/food--4.png"
+                alt="Image of a food"
+                class="food-image"
+              />
+              <div class="food-card-desc">
+                <div class="food-heading-box">
+                  <p class="food-heading">Fruit Salad</p>
+                  <button class="small--btn">
+                    <ion-icon
+                      name="heart-outline"
+                      class="like--icon"
+                    ></ion-icon>
+                  </button>
+                </div>
+                <p class="food-description">With seasonal fruits</p>
+                <p class="food-price">$ 24.00</p>
+              </div>
+              <a href="#" class="btn-cart btn-cart-secondary"
+                ><ion-icon
+                  name="cart-outline"
+                  class="cart-outline-secondary"
+                ></ion-icon
+              ></a>
+            </div>
+
+            <div class="food-card">
+              <img
+                src="img/food--4.png"
+                alt="Image of a food"
+                class="food-image"
+              />
+              <div class="food-card-desc">
+                <div class="food-heading-box">
+                  <p class="food-heading">Vegitable Hot Dog</p>
+                  <button class="small--btn">
+                    <ion-icon
+                      name="heart-outline"
+                      class="like--icon"
+                    ></ion-icon>
+                  </button>
+                </div>
+                <p class="food-description">With avocado seasoning</p>
+                <p class="food-price">$ 24.00</p>
+              </div>
+              <a href="#" class="btn-cart btn-cart-secondary"
+                ><ion-icon
+                  name="cart-outline"
+                  class="cart-outline-secondary"
+                ></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="feature-text">
+            <h2 class="secondary-header margin-b-2-4x">
+              We have Delicious food <br />Tasty food in the town
+            </h2>
+            <p class="primary--description">
+              Food being the source of human life, we need to consume best food
+              always. In order to have best food, we provide the varierty and
+              quality for good and healthy food.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Price chart -->
+      <section class="price-section">
+        <div class="price-section-container grid grid-2--cols">
+          <div class="price-text">
+            <h2 class="secondary-header margin-b-2-4x">
+              Fresh food Affordable food Right at your doorsteps.
+            </h2>
+            <p class="primary--description">
+              Our food is prepared by best and reknowned chefs across the globe.
+              Food given to you are best in quality and made with fresh and
+              homegrown ingredients. These will be delivered right at your
+              doorsteps.
+            </p>
+          </div>
+          <div class="price-image">
+            <img
+              src="img/food--1.png"
+              alt="A picture of Salad bowl"
+              class="price-img"
+            />
+          </div>
+        </div>
+
+        <div class="app-link-container grid grid-2--cols">
+          <div class="app-link-images">
+            <img
+              src="img/app-screenshot-2.png"
+              alt="Screenshot of the app"
+              class="app-image"
+            />
+            <!-- <img
+              src="img/app-screenshot-2.png"
+              alt="Second screenshot of the app"
+            /> -->
+          </div>
+          <div class="app-link-text">
+            <h2 class="secondary-header margin-b-2-4x">App is Available</h2>
+            <p class="primary--description margin-b-2-4x">
+              We have a very intuitive app present on App store and Play store.
+              Download it now from the links given below
+            </p>
+            <div class="app--links">
+              <a href="https://apps.apple.com/" target="_blank" class="app-link"
+                ><img
+                  src="img/icons/ios_app_store.png"
+                  alt="App store image link"
+              /></a>
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                class="app-link"
+                ><img
+                  src="img/icons/android_app_store.png"
+                  alt="Play store image link"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section-cta">
+        <p class="pre-heading">Let's talk.</p>
+        <div class="cta-content grid grid-2--cols">
+          <h2 class="secondary-header">Want to Reserve a Table?</h2>
+          <a href="#" class="btn btn--secondary justify-self-end contact-us">
+            Contact Us Now
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <img
+          src="img/icons/Flavourbox-Icon.png"
+          alt="Icon for Flavourbox"
+          class="footer-logo"
+        />
+        <div class="footer--links">
+          <h3 class="tertiary-header">Our Services</h3>
+          <ul class="footer-list">
+            <li class="footer-link"><a href="#">Pricing</a></li>
+            <li class="footer-link"><a href="#">Tracking</a></li>
+            <li class="footer-link"><a href="#">Report a bug</a></li>
+            <li class="footer-link"><a href="#">Terms of services</a></li>
+          </ul>
+        </div>
+        <div class="footer--links">
+          <h3 class="tertiary-header">Our Company</h3>
+          <ul class="footer-list">
+            <li class="footer-link"><a href="#">Reporting</a></li>
+            <li class="footer-link"><a href="#">Get in Touch</a></li>
+            <li class="footer-link"><a href="#">Management</a></li>
+          </ul>
+        </div>
+        <div class="footer--links">
+          <h3 class="tertiary-header">Address</h3>
+          <p class="secondary-description">
+            121 King St, 55 Eagles Avenue <br />Texas <br /><a
+              href="tel:888-8888-090"
+              class="contact-link"
+              >888-8888-090</a
+            >
+            <br /><a href="mailto:info@gmail.com" class="contact-link"
+              >info@gmail.com</a
+            >
+          </p>
+          <ul class="footer-list">
+            <li class="footer-link">
+              <a
+                href="https://www.freepik.com/free-vector/falling-tea-leaves-realistic-green-foliage-flying_35563589.htm#fromView=search&page=1&position=0&uuid=a487642f-ac9e-4f7d-b696-304f26a8f1d7"
+                target="_blank"
+                >Image by upklyak on Freepik</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Login/Register modal form -->
+    <div class="login-section-overlay hide"></div>
+    <div class="login-modal hide">
+      <div class="tab-container margin-b-2-4x login-tab">
+        <button
+          class="tab-button tab-button--selected login-tab-btn"
+          data-action="login"
+        >
+          Sign in
+        </button>
+        <button class="tab-button login-tab-btn" data-action="register">
+          Sign up
+        </button>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="cross-icon--right"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+      <div class="message-container"></div>
+      <!-- Login form -->
+      <form class="user-cred login-form" action="submit">
+        <input type="email" placeholder="Email ID" name="email" required />
+        <input
+          type="password"
+          placeholder="Enter a password"
+          name="password"
+          required
+        />
+        <button class="button button-primary margin-t-2-4x">Login</button>
+      </form>
+
+      <!-- Registration form -->
+      <form class="user-cred register-form hide" action="submit">
+        <input
+          type="text"
+          placeholder="First Name*"
+          name="firstname"
+          required
+        />
+        <input type="text" placeholder="Last Name*" name="lastname" required />
+        <input type="email" placeholder="Email ID*" name="email" required />
+        <input
+          type="password"
+          placeholder="Enter a password"
+          name="password"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Confirm password"
+          name="cpassword"
+          required
+        />
+        <button class="button button-primary margin-t-2-4x">Register</button>
+      </form>
+    </div>
+
+    <!-- CTA modal form -->
+    <div class="cta-section-wrapper cta-wrapper-hide"></div>
+    <div class="section-cta-modal cta-hide">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="cross-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+
+      <h2 class="cta-form-heading">Want to reserve a table?</h2>
+      <p class="cta-desc">
+        One of our agents will get in touch as soon as possible.
+      </p>
+      <form class="cta-form" action="submit">
+        <input
+          type="text"
+          placeholder="First Name*"
+          id="firstname"
+          name="firstname"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Last Name*"
+          id="lastname"
+          name="lastname"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email ID*"
+          id="email"
+          name="email"
+          required
+        />
+        <div class="country-phone">
+          <select id="country" name="country">
+            <option value="India">India</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Australia">Australia</option>
+            <option value="Bangladesh">New Zeland</option>
+          </select>
+          <input
+            type="tel"
+            name="telephone"
+            id="telephone"
+            placeholder="Phone Number"
+          />
+        </div>
+        <textarea
+          placeholder="Any particular preferences you might have?"
+          rows="6"
+        ></textarea>
+
+        <button class="button button-primary">Submit</button>
+      </form>
+
+      <aside class="cta-footer">
+        By submitting this form I agree that Flavourbox may collect, process and
+        retain my data pursuant to its
+        <a href="#" class="privacy-link">Privacy Policy</a>.
+      </aside>
+    </div>
+  </body>
+</html>
